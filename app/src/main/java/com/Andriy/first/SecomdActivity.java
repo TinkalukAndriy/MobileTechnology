@@ -11,8 +11,8 @@ public class SecomdActivity extends AppCompatActivity {
  private EditText usernameEditText;
  private EditText passwordEditText;
  private SharedPreferences pref;
- private final String save_key = "save_key";
- private final String save_key1 = "save_key";
+ private final String save_key = "username";
+ private final String save_key1 = "password";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +30,12 @@ public class SecomdActivity extends AppCompatActivity {
     edit.putString(save_key,usernameEditText.getText().toString());
     edit.putString(save_key1,passwordEditText.getText().toString());
     edit.apply();
+        Intent intent = new Intent(this, MainActivity.class);
+        String username = pref.getString(save_key, "");
+        String password = pref.getString(save_key1, "");
+        intent.putExtra("username", username);
+        intent.putExtra("password", password);
+        startActivity(intent);
     }
     private void init () {
         pref = getSharedPreferences("text", MODE_PRIVATE);

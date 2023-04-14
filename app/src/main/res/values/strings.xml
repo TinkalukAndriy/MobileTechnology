@@ -3,4 +3,8 @@
     <string name="btn1">Go to Second_Activity</string>
     <string name="btn2">Go to Third_Activity</string>
     <string name="btn3">Back</string>
+    <string name="Email">Email</string>
+    <string name="password">password</string>
+    <string name="Sing_up">Sing up</string>
+    <string name="login">Login</string>
 </resources>

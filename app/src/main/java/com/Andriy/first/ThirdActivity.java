@@ -17,6 +17,7 @@ public class ThirdActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
+        init1();
     }
 
     public void onClick (View v) {
@@ -29,7 +30,7 @@ public class ThirdActivity extends AppCompatActivity {
         edit.putString(save_key3,passwordEditText1.getText().toString());
         edit.apply();
     }
-    public void init (View V) {
+    private void init1 () {
         pref1 = getSharedPreferences("text", MODE_PRIVATE);
         usernameEditText1 = findViewById(R.id.editTextTextEmailAddress);
         passwordEditText1 = findViewById(R.id.editTextNumberPassword);

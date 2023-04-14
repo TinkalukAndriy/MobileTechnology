@@ -17,7 +17,9 @@ public class SecomdActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_secomd);
+        init ();
     }
+
 
     public void onClick (View v) {
         Intent intent = new Intent (this, MainActivity.class);
@@ -29,7 +31,7 @@ public class SecomdActivity extends AppCompatActivity {
     edit.putString(save_key1,passwordEditText.getText().toString());
     edit.apply();
     }
-    public void init (View V) {
+    private void init () {
         pref = getSharedPreferences("text", MODE_PRIVATE);
         usernameEditText = findViewById(R.id.editTextTextEmailAddress);
         passwordEditText = findViewById(R.id.editTextNumberPassword);
